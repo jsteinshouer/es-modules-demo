@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ES Modules - BarChart</title>
+        
+        <script type="module">
+            import { GroupedBarChart } from "./BarChart.js";
+            const data = [{
+                    "type": "Direct Recruit",
+                    "group": "2021",
+                    "count": 567
+                },
+                {
+                    "type": "Direct Recruit",
+                    "group": "2022",
+                    "count": 791
+                },
+                {
+                    "type": "Direct Recruit",
+                    "group": "YTD",
+                    "count": 1127
+                },
+                {
+                    "type": "Direct Recruit",
+                    "group": "YOY",
+                    "count": 1310
+                },
+                {
+                    "type": "Downline Agent",
+                    "group": "2021",
+                    "count": 2937
+                },
+                {
+                    "type": "Downline Agent",
+                    "group": "2022",
+                    "count": 3024
+                },
+                {
+                    "type": "Downline Agent",
+                    "group": "YTD",
+                    "count": 5275
+                },
+                {
+                    "type": "Downline Agent",
+                    "group": "YOY",
+                    "count": 6640
+                }
+            ];
+
+
+            //document.body.onload = function() {
+
+            let chart = GroupedBarChart(data, {
+                x: d => d.group,
+                y: d => d.count,
+                z: d => d.type,
+                yLabel: "",
+                zDomain: ["Direct Recruit", "Downline Agent"],
+                colors: ["#dbe9f6", "#08306b"],
+                width: 900,
+                height: 500
+            })
+
+
+            document.getElementById("myChart").appendChild(chart);
+        </script>
+</head>
+<body>
+    <div id="myChart"></div>
+</body>
+</html>
