@@ -4,9 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ES Modules - BarChart</title>
-        
+        <script type="importmap">
+            {
+                "imports": {
+                    "BarChart": "./BarChart.js",
+                    "d3": "https://cdn.skypack.dev/d3@7"
+                }
+            }
+        </script>
         <script type="module">
-            import { GroupedBarChart } from "./BarChart.js";
+            import { GroupedBarChart } from "BarChart";
             const data = [{
                     "type": "Direct Recruit",
                     "group": "2021",

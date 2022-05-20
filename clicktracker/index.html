@@ -7,21 +7,14 @@
 
     <script type="module">
         import clickTracker from "./ClickTracker.js";
-
-        let btn1 = document.getElementById("btn1")
-        let btn2 = document.getElementById("btn2")
         let counter = document.getElementById("count")
-        clickTracker( btn1 );
-        clickTracker( btn2 );
-        btn1.addEventListener( "clickTrackerClick", function( data ) {
+        clickTracker.registerElement( document.getElementById("btn1") );
+        clickTracker.registerElement( document.getElementById("btn2") );
+        clickTracker.registerElement( document.getElementById("lnk1") );
+        clickTracker.onClick( function( clickCount ) {
             // console.log(data);
-            counter.innerHTML = "Clicks: " + data.detail;
+            counter.innerHTML = "Clicks: " + clickCount;
         })
-        btn2.addEventListener( "clickTrackerClick", function( data ) {
-            // console.log(data);
-            counter.innerHTML = "Clicks: " + data.detail;
-        })
-
 
 
   </script>
@@ -29,6 +22,7 @@
 <body>
     <button id="btn1">Button 1</button>
     <button id="btn2">Button 2</button>
+    <a id="lnk1" href="#">Click here</a>
     <p id="count"></p>
 </body>
 </html>

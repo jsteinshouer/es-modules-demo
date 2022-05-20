@@ -1,0 +1,9 @@
+{
+    "default": "https://bootswatch.com/_vendor/bootstrap/dist/css/bootstrap.min.css",
+    "sketchy": "https://bootswatch.com/5/sketchy/bootstrap.min.css",
+    "yeti": "https://bootswatch.com/5/yeti/bootstrap.min.css",
+    "cerulean": "https://bootswatch.com/5/cerulean/bootstrap.min.css",
+    "darkly": "https://bootswatch.com/5/darkly/bootstrap.min.css",
+    "slate": "https://bootswatch.com/5/slate/bootstrap.min.css",
+    "materia": "https://bootswatch.com/5/materia/bootstrap.min.css"
+}

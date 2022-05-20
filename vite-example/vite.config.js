@@ -12,10 +12,12 @@ export default defineConfig({
     }
   },
   build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/components/HelloWorld.vue'),
-      name: 'HelloWorld',
-      fileName: (format) => `HelloWorld.${format}.js`
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        vuejs: path.resolve(__dirname, 'vuejs.html'),
+        md: path.resolve(__dirname, 'md.html')
+      }
     }
   }
 })
