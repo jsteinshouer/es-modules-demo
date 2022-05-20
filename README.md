@@ -13,6 +13,7 @@ Run the dev Server
 
 ```
 cd vite-example
+npm install
 npm run dev
 ```
 
